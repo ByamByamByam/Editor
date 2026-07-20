@@ -20,18 +20,18 @@
 </header>
 <!-- 사용설명서 -->
 <div class="helpManualContent">
-<strong><p>프로그램을 사용해주셔서 감사합니다.</p></strong>
-<p>이 프로그램은 로그 편집 및 연출 설정, 보관하기 위한 리플레이 에디터입니다.</p>
-<p>Roll20, 코코포리아, 카카오톡, 메모장 로그를 하나의 프로젝트로 관리하고</p>
+<strong><p>이 프로그램은 로그 편집을 위한 리플레이 에디터입니다.</p></strong>
+<p>Roll20, 코코포리아, 카카오톡, 메모장 로그를 프로젝트로 관리하고</p>
 <p>배경, BGM, 효과음, 연출을 이용하여 로그를 제작할 수 있습니다.</p>
 <hr/>
 <h2>처음 시작하기</h2>
-<p>1. <strong>로그 가져오기</strong> 또는 <strong>직접 채팅</strong>을 추가합니다.</p>
-<p>2. 채팅 추가시 챕터는 자동생성됩니다.</p>
-<p>3. 등장인물을 등록합니다.</p>
-<p>4. 필요시 편집모드에서 구간별 배경/BGM/효과음을 추가합니다.</p>
-<p>5. 리플레이버튼으로 감상하거나 프로젝트를 저장 또는 HTML로 출력합니다.</p>
-<p>6. 저장은 반드시 <strong>새 폴더</strong> 안에 해주세요.</p>
+<p>1. <strong>로그 가져오기</strong> 또는 <strong>채팅</strong>을 추가합니다.</p>
+<p>2. 필요시 편집모드에서 구간별 배경/BGM/효과음을 추가합니다.</p>
+<p>4. 리플레이버튼으로 감상하거나 프로젝트를 저장 또는 HTML로 출력합니다.</p>
+<p>5. 저장은 반드시 <strong>새 폴더</strong> 안에 해주세요.</p>
+<p>&emsp;프로젝트 저장시 bgm, images, se(=효과음)폴더가 자동생성됩니다.</p>
+<p>&emsp;필요한 소스는 이 곳에 넣고 직접 관리할 수 있습니다.</p>
+<p>&emsp;프로젝트 파일 확장자는 .cae 입니다.</p>
 <hr/>
 <h2>로그 가져오기</h2>
 <p>지원 형식</p>
@@ -44,26 +44,34 @@
 <p>가져오기 시</p>
 <ul>
 <li>등장인물 자동 생성</li>
-<li>판정 자동 인식 및 CoC 판정 카드 자동 생성</li>
+<li>판정결과 인식 및 CoC 판정 카드 생성, 이미지 출력</li>
 <li>(일부 인식이 안될 수 있습니다)</li>
-<li>메모장은 [날짜] 이름: 대사 형식을 인식합니다.</li>
+<li>메모장은 [날짜] 이름: 대사 형식을 인식합니다. 추가기능 구현예정</li>
 </ul>
 <ul>
 <li>/desc, /emas 자동 변환</li>
-<li>(em은 emas로 변환됩니다. 불러온 후 편집시 /em으로 변경하세요.)</li>
+<li>(em은 emas로 변환됩니다. 불러온 후 필요시 /em으로 변경하세요.)</li>
 <li>*로그 내 이미지, css 인식</li>
 <li>예: [빨간 글씨](#" style="color:red;")</li>
+</ul>
+<hr/>
+<h2>채팅방과 챕터</h2>
+<ul>
+<li>편집, 삭제는 프로젝트 메뉴에서 진행합니다.</li>
+<li>챕터 분리, 챕터 합치기</li>
+<li>(선택한 챕터 또는 메세지를 기준으로 포함하여 설정됩니다.)</li>
+<li>ABC, D &gt;&gt;	B 메시지 선택 후 <strong>'챕터 분리하기'</strong> &gt;&gt; A, BC, D</li>
+<li>A, B, C, D &gt;&gt; C챕터 선택 후 <strong>'다음 챕터와 합치기'</strong> &gt;&gt; A, B, CD</li>
 </ul>
 <hr/>
 <h2>배경, BGM, 효과음</h2>
 <ul>
 <li>배경 기본 색</li>
-<li>(이미지 전환시 나타나는 색이 됩니다)</li>
+<li>(배경이미지가 있을시 페이드아웃 색이 됩니다)</li>
 </ul>
 <ul>
-<li>구간 별 배경 이미지</li>
-<li>구간 별 BGM, 효과음</li>
-<li>html 출력시 기본 배경색상만 지원됩니다.</li>
+<li>구간 별 배경 이미지, bgm,효과음</li>
+<li>html 출력시 기본 배경만 지원됩니다.</li>
 </ul>
 <hr/>
 <h2>연출</h2>
@@ -72,14 +80,13 @@
 <li>메시지 간격</li>
 <li>연속 대화 묶기</li>
 <li>desc, em, emas, as 스타일</li>
-<li>웹폰트</li>
+<li>웹폰트 적용</li>
 </ul>
 <hr/>
 <h2>리플레이</h2>
 <ul>
 <li>내가 설정한 연출을 감상할 수 있는 시스템입니다.</li>
 <li>연출탭에서 클릭액션을 설정하면 더 몰입할 수 있습니다.</li>
-<li>Shift를 이용하여 여러 메시지를 선택한 뒤 PNG로 저장.</li>
 </ul>
 <hr/>
 <h2>출력</h2>
@@ -92,23 +99,16 @@
 <li>단 BGM, 효과음, 배경이미지, 클릭액션은 지원하지 않습니다.</li>
 </ul>
 <hr/>
-<h2>프로젝트</h2>
-<p>프로젝트에는 다음 정보가 모두 저장됩니다.</p>
-<ul>
-<li>채팅, 챕터 이름 설정</li>
-<li>챕터 분리, 챕터 합치기 (선택한 챕터 또는 메세지를 기준으로 포함하여 설정됩니다.)</li>
-</ul>
-<p>예) A, B, C, D &gt;&gt; B챕터 선택 후 다음 챕터와 합치기 &gt;&gt; A, BC, D</p>
-<p>ABC, D &gt;&gt;	B 메시지 선택 후 챕터 분리하기 &gt;&gt; A, BC, D</p>
-<ul>
-<li>등장인물</li>
+
+<!-- <ul> -->
+<!-- <li>등장인물</li>
 <li>연출</li>
 <li>배경</li>
 <li>BGM</li>
 <li>효과음</li>
 <li>웹폰트</li>
 <li>출력 설정</li>
-</ul>
+</ul> -->
 <hr/>
 <h2>TIP</h2>
 <ul>
@@ -117,6 +117,7 @@
 <li>Shift + Enter : 줄바꿈</li>
 <li>Esc : 메시지 선택 해제, 집중모드 돌아가기</li>
 <li>Shift + 클릭 : 메시지 범위 선택</li>
+<li>로그내역에서 <strong> home, pgup/pgdn, end</strong> 로 스크롤 이동 가능</li>
 </ul>
 </div>
 </aside>
@@ -188,10 +189,10 @@
 <section id="centerPanel">
 <!-- 미리보기 -->
 <section id="previewPanel">
-<div class="panelHeader">
+<div class="panelHeader"><button disabled="" id="captureBtn" title="메시지를 Shift+클릭하여 선택해주세요." type="button">캡처</button>
 <div id="previewHeaderRight">
 <span id="currentChapterTitle"></span>
-<div id="eventButtons"><button disabled="" id="captureBtn" type="button">캡처</button>
+<div id="eventButtons">
 <button aria-pressed="false" id="eventGuideToggleBtn" type="button">편집 모드</button>
 
 <button aria-pressed="false" id="focusModeBtn" type="button">리플레이</button>
@@ -529,6 +530,12 @@
 <span>볼륨</span>
 <input id="bgmVolumeInput" max="100" min="0" type="number" value="50"/>
 </label>
+<fieldset class="exportRangeGroup eventDelayGroup">
+<legend>재생 대기</legend>
+<label><input checked="" name="bgmDelay" type="radio" value="0"/> 0초</label>
+<label><input name="bgmDelay" type="radio" value="1"/> 1초</label>
+<label><input name="bgmDelay" type="radio" value="2"/> 2초</label>
+</fieldset>
 <div class="eventInspectorButtons">
 <button id="bgmAddBtn" type="button">
                                             BGM 추가
@@ -582,6 +589,12 @@
 <span class="sublabel">볼륨</span>
 <input id="soundVolumeInput" max="100" min="0" type="number" value="70"/>
 </label>
+<fieldset class="exportRangeGroup eventDelayGroup">
+<legend>재생 대기</legend>
+<label><input checked="" name="soundDelay" type="radio" value="0"/> 0초</label>
+<label><input name="soundDelay" type="radio" value="1"/> 1초</label>
+<label><input name="soundDelay" type="radio" value="2"/> 2초</label>
+</fieldset>
 <div class="eventInspectorButtons">
 <button id="soundAddBtn" type="button">
                                             효과음 추가
@@ -600,101 +613,96 @@
 </div>
 </div>
 </section>
+    <section class="inspectorSection">
+        <button aria-expanded="false" class="inspectorSectionHeader" data-inspector-target="miscInspectorBody" type="button">
+            <span class="inspectorArrow">▶</span>
+            <span>명령어</span>
+        </button>
+        <div class="inspectorSectionBody" hidden="" id="miscInspectorBody">
+            <div class="miscInspectorContent">
+                
+                <label class="miscCheckboxLabel">
+                    <input checked="" id="performanceDividerInput" type="checkbox"/>
+                    <span>구분선 표시</span>
+                </label>
+                <label class="miscColorLabel">
+                    <span>desc 글자색</span>
+                    <input id="descTextColorInput" type="color" value="#555555"/>
+                </label>
+                <label class="miscColorLabel">
+                    <span>em 글자색</span>
+                    <input id="emTextColorInput" type="color" value="#666666"/>
+                </label>
+                <label class="miscColorLabel">
+                    <span>emas 글자색</span>
+                    <input id="emasTextColorInput" type="color" value="#666666"/>
+                </label>
+                <label class="miscColorLabel">
+                    <span>as 말풍선 색</span>
+                    <input id="asBubbleColorInput" type="color" value="#ffffff"/>
+                </label>
+                <label class="miscColorLabel">
+                    <span>as 글자색</span>
+                    <input id="asTextColorInput" type="color" value="#000000"/>
+                </label>
+                <div class="eventInspectorButtons performanceResetButtons">
+                    <button id="resetPerformanceStylesBtn" type="button">스타일 초기화</button>
+                </div>
+            </div>
+        </div>
+    </section>
 <!-- =============================
                             출력
                         ============================== -->
 <!-- =============================
                             기타
                         ============================== -->
-<section class="inspectorSection">
-<button aria-expanded="false" class="inspectorSectionHeader" data-inspector-target="miscInspectorBody" type="button">
-<span class="inspectorArrow">
-                                    ▶
-                                </span>
-<span>연출</span>
-</button>
-<div class="inspectorSectionBody" hidden="" id="miscInspectorBody">
-<div class="miscInspectorContent">
-<div class="miscFontSetting">
-<label class="miscTextLabel">
-<span class="sublabel">로그 웹폰트</span>
-<textarea id="logFontImportInput" placeholder="@import url('    '); 형태의 코드를 붙여넣으세요. 인터넷 연결이 필요합니다. 초기화 시 코드를 지우고 적용을 누르세요." rows="4"></textarea>
-</label>
-<div class="eventInspectorButtons miscActionButtons"><button id="applyLogFontImportBtn" type="button">폰트 적용</button></div>
-</div>
-<label class="miscRangeLabel">
-<span class="sublabel">
-
-                                            메시지 간격
-
-                                            <output id="focusMessageGapOutput">
-                                                18px
-                                            </output>
-</span>
-<input id="focusMessageGapInput" max="60" min="0" step="1" type="range" value="18"/>
-</label>
-<span class="sublabel">등장 방식</span>
-<label class="miscCheckboxLabel">
-<input id="groupConsecutiveMessagesInput" type="checkbox"/>
-<span>
-                                                연속 대화 묶기
-                                            </span>
-</label>
-<label class="miscCheckboxLabel">
-<input id="focusClickActionInput" type="checkbox"/>
-<span>클릭 액션 사용</span>
-</label>
-<label class="miscSelectLabel">
-<select id="focusClickAnimationSelect">
-<option value="instant">
-                                                바로 나타나기
-                                            </option>
-<option value="slide">
-                                                아래에서 나타나기
-                                            </option>
-</select>
-</label>
-<p class="miscInspectorHelp">
-                                        클릭 액션을 켜면 리플레이시
-                                        모든 메시지가 숨겨지고 클릭할 때마다
-                                        하나씩 나타납니다.
-                                    </p>
-<div class="miscSectionDivider">
-                                        연출 설정
-                                    </div>
-<label class="miscCheckboxLabel">
-<input checked="" id="performanceDividerInput" type="checkbox"/>
-<span>
-                                            구분선 표시
-                                        </span>
-</label>
-<label class="miscColorLabel">
-<span>desc 글자색</span>
-<input id="descTextColorInput" type="color" value="#555555"/>
-</label>
-<label class="miscColorLabel">
-<span>em 글자색</span>
-<input id="emTextColorInput" type="color" value="#666666"/>
-</label>
-<label class="miscColorLabel">
-<span>emas 글자색</span>
-<input id="emasTextColorInput" type="color" value="#666666"/>
-</label>
-<label class="miscColorLabel">
-<span>as 말풍선 색</span>
-<input id="asBubbleColorInput" type="color" value="#ffffff"/>
-</label>
-<label class="miscColorLabel">
-<span>as 글자색</span>
-<input id="asTextColorInput" type="color" value="#000000"/>
-</label><div class="eventInspectorButtons performanceResetButtons">
-<button id="resetPerformanceStylesBtn" type="button">
-                스타일 초기화
-            </button>
-</div>
-</div>
-</div>
-</section><section class="inspectorSection">
+    <section class="inspectorSection">
+        <button aria-expanded="false" class="inspectorSectionHeader" data-inspector-target="miscInspectorBody" type="button">
+            <span class="inspectorArrow">▶</span>
+            <span>연출</span>
+        </button>
+        <div class="inspectorSectionBody" hidden="" id="miscInspectorBody">
+            <div class="miscInspectorContent">
+                <div class="miscFontSetting">
+                    <label class="miscTextLabel">
+                        <span class="sublabel">로그 웹폰트</span>
+                        <textarea id="logFontImportInput" placeholder="@import url('    '); 형태의 코드를 붙여넣으세요. 인터넷 연결이 필요합니다. 초기화 시 코드를 지우고 적용을 누르세요." rows="4"></textarea>
+                    </label>
+                    <div class="eventInspectorButtons miscActionButtons">
+                        <button id="applyLogFontImportBtn" type="button">폰트 적용</button>
+                    </div>
+                </div>
+                <label class="miscRangeLabel">
+                    <span class="sublabel">메시지 간격
+                        <output id="focusMessageGapOutput">18px</output>
+                    </span>
+                    <input id="focusMessageGapInput" max="60" min="0" step="1" type="range" value="18"/>
+                </label>
+                <span class="sublabel">등장 방식</span>
+                <label class="miscCheckboxLabel">
+                    <input id="groupConsecutiveMessagesInput" type="checkbox"/>
+                        <span>연속 대화 묶기</span>
+                </label>
+                <label class="miscCheckboxLabel">
+                    <input id="focusClickActionInput" type="checkbox"/>
+                    <span>클릭 액션 사용</span>
+                </label>
+                    <label class="miscCheckboxLabel">
+                        <input id="focusLongMessageClickInput" type="checkbox"/>
+                            <span>클릭으로 장문메시지 보기</span>
+                </label>
+                <label class="miscSelectLabel">
+                    <select id="focusClickAnimationSelect">
+                        <option value="instant">바로 나타나기</option>
+                            <option value="slide">아래에서 나타나기</option>
+                    </select>
+                </label>
+                <p class="miscInspectorHelp">클릭 액션을 켜면 리플레이시 모든 메시지가 숨겨지고 클릭할 때마다 하나씩 나타납니다. 장문메시지 보기를 켜면 긴 메시지를 400px 단위로 나누어 읽습니다.</p>
+            </div>
+        </div>
+    </section>
+    <section class="inspectorSection">
 <button aria-expanded="false" class="inspectorSectionHeader" data-inspector-target="exportInspectorBody" type="button">
 <span class="inspectorArrow">▶</span>
 <span>출력</span>
@@ -702,8 +710,7 @@
 <div class="inspectorSectionBody" hidden="" id="exportInspectorBody">
 <div class="exportInspectorContent">
 <p class="exportInspectorDescription">
-                                        편집 UI와 음악, 효과음, 클릭 액션을 제외한
-                                        정적 로그 HTML 파일을 만듭니다.
+                                        메시지와 배경 연출이 포함된 HTML 파일을 만듭니다.
                                     </p>
 <fieldset class="exportRangeGroup">
 <legend>내보낼 범위</legend>
