@@ -1076,6 +1076,29 @@ nav button:hover {
     background: white;
 }
 
+
+.messageProfile.speakerProfileLink {
+    cursor: pointer;
+}
+
+.messageProfile.speakerProfileLink:hover {
+    outline:
+        2px solid
+        rgba(91, 140, 255, 0.7);
+
+    outline-offset:
+        2px;
+}
+
+.messageProfile.speakerProfileLink:focus-visible {
+    outline:
+        3px solid
+        rgba(91, 140, 255, 0.8);
+
+    outline-offset:
+        2px;
+}
+
 .messageContent {
     min-width: 0;
 }

@@ -273,6 +273,59 @@ if (shouldShowProfile) {
         "messageProfile"
     );
 
+    if (speaker) {
+
+    profile.classList.add(
+        "speakerProfileLink"
+    );
+
+    profile.setAttribute(
+        "role",
+        "button"
+    );
+
+    profile.setAttribute(
+        "tabindex",
+        "0"
+    );
+
+    profile.addEventListener(
+        "click",
+        event => {
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            selectSpeaker(
+                speaker.id
+            );
+
+        }
+    );
+
+    profile.addEventListener(
+        "keydown",
+        event => {
+
+            if (
+                event.key !== "Enter" &&
+                event.key !== " "
+            ) {
+                return;
+            }
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            selectSpeaker(
+                speaker.id
+            );
+
+        }
+    );
+
+}
+
     if (
         profileType ===
         "square"

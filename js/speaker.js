@@ -77,6 +77,11 @@ function initializeSpeaker() {
             handleSpeakerProfilePreviewChange
         );
 
+        bubbleColor?.addEventListener(
+    "input",
+    updateSpeakerProfilePickerColor
+);
+
     speakerProfileType
         .forEach(
             radio => {
@@ -128,6 +133,7 @@ function clearSpeakerEditor(
     );
 
     bubbleColor.value = "#ffffff";
+    updateSpeakerProfilePickerColor();
     bubbleTransparent.checked = false;
     textColor.value = "#000000";
 
@@ -512,6 +518,7 @@ function selectSpeaker(speakerId) {
     );
 
     bubbleColor.value = speaker.bubbleColor || "#ffffff";
+    updateSpeakerProfilePickerColor();
     bubbleTransparent.checked = Boolean(speaker.bubbleTransparent);
     textColor.value = speaker.textColor || "#000000";
 
@@ -645,6 +652,18 @@ function handleSpeakerProfilePreviewChange() {
     reader.readAsDataURL(
         file
     );
+
+}
+
+function updateSpeakerProfilePickerColor() {
+
+    if (!speakerProfilePicker) {
+        return;
+    }
+
+    speakerProfilePicker.style.backgroundColor =
+        bubbleColor?.value ||
+        "#f8faff";
 
 }
 

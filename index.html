@@ -26,8 +26,8 @@
 <hr/>
 <h2>처음 시작하기</h2>
 <p>1. <strong>로그 가져오기</strong> 또는 <strong>채팅</strong>을 추가합니다.</p>
-<p>2. 필요시 편집모드에서 구간별 배경/BGM/효과음을 추가합니다.</p>
-<p>4. 리플레이버튼으로 감상하거나 프로젝트를 저장 또는 HTML로 출력합니다.</p>
+<p>2. 필요시<strong> 편집모드</strong>에서 구간별 배경/BGM/효과음을 추가합니다.</p>
+<p>4. 리플레이 버튼으로 감상하거나 프로젝트를 저장 또는 HTML로 출력합니다.</p>
 <p>5. 저장은 반드시 <strong>새 폴더</strong> 안에 해주세요.</p>
 <p>&emsp;프로젝트 저장시 bgm, images, se(=효과음)폴더가 자동생성됩니다.</p>
 <p>&emsp;필요한 소스는 이 곳에 넣고 직접 관리할 수 있습니다.</p>
@@ -88,16 +88,7 @@
 <li>내가 설정한 연출을 감상할 수 있는 시스템입니다.</li>
 <li>연출탭에서 클릭액션을 설정하면 더 몰입할 수 있습니다.</li>
 </ul>
-<hr/>
-<h2>출력</h2>
-<ul>
-<li>HTML 로그 출력</li>
-<li>현재 챕터, 채팅방 전체 단위 html 출력</li>
-</ul>
-<p>출력된 HTML은 에디터 없이 브라우저에서 바로 열람할 수 있습니다.</p>
-<ul>
-<li>단 BGM, 효과음, 배경이미지, 클릭액션은 지원하지 않습니다.</li>
-</ul>
+
 <hr/>
 
 <!-- <ul> -->
@@ -307,7 +298,7 @@
 </button>
 <div class="inspectorSectionBody" hidden="" id="speakerInspectorBody">
 <div id="speakerList">
-<button aria-label="인물 추가" id="addSpeakerBtn" type="button"></button>
+<button aria-label="인물 추가" id="addSpeakerBtn" type="button"><span>+</span></button>
 </div>
 <div id="speakerEditor">
 <div class="speakerProfileEditor">
@@ -431,7 +422,7 @@
                                         표시할 배경 설정
                                     </div>
 <p class="eventInspectorDescription backgroundBaseHelp">
-                                        선택한 메시지 또는 구간에 표시할 배경을 설정합니다.
+                                        배경 추가 및 설정한 라벨 클릭시 수정할 수 있습니다.
                                     </p>
 <label class="eventSourceLabel backgroundUrlLabel">
 <span>배경 이미지 URL</span>
@@ -506,7 +497,7 @@
 <div class="inspectorSectionBody" hidden="" id="bgmInspectorBody">
 <div class="eventInspectorContent">
 <p class="eventInspectorDescription backgroundBaseHelp">
-                                        메시지 구간에서 재생할 BGM을 설정합니다.
+                                        BGM 추가 및 설정한 라벨 클릭시 수정할 수 있습니다.
                                     </p>
 <label class="eventSourceLabel">
 <span class="sublabel">URL로 재생</span>
